@@ -1,3 +1,5 @@
 = XYZ Reader Starter Code
 
 This repository stores the starter code for the XYZ Reader project in Udacity's Android Nanodegree.
+
+![ezgif com-video-to-gif 1](https://user-images.githubusercontent.com/1584604/46637848-05235000-cb2c-11e8-9da8-ab24bfbb20e5.gif)
