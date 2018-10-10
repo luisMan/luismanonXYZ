@@ -14,6 +14,7 @@ apply plugin: 'com.android.application'
 
 repositories {
     mavenCentral()
+    google()
     maven {
         url 'https://maven.google.com/'
         name 'Google'
@@ -21,23 +22,33 @@ repositories {
 }
 
 android {
-    compileSdkVersion 25
-    buildToolsVersion "25.0.2"
+    compileSdkVersion 27
+    buildToolsVersion '27.0.3'
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 25
+        targetSdkVersion 27
     }
+
+
 }
 
 dependencies {
-    compile "com.android.support:design:$androidSupportVersion"
-    compile "com.android.support:support-v4:$androidSupportVersion"
-    compile "com.android.support:support-v13:$androidSupportVersion"
-    compile "com.android.support:appcompat-v7:$androidSupportVersion"
-    compile "com.android.support:palette-v7:$androidSupportVersion"
-    compile "com.android.support:recyclerview-v7:$androidSupportVersion"
-    compile "com.android.support:cardview-v7:$androidSupportVersion"
-    compile 'com.squareup.okhttp3:okhttp:3.1.2'
-    compile files('libs/volley.jar')
+
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+
+    implementation 'com.android.support:design:27.1.0'
+    implementation 'com.android.support:support-annotations:27.1.1'
+    implementation "com.android.support:support-v4:$androidSupportVersion"
+    implementation "com.android.support:appcompat-v7:$androidSupportVersion"
+    implementation "com.android.support:palette-v7:$androidSupportVersion"
+    implementation "com.android.support:recyclerview-v7:$androidSupportVersion"
+    implementation "com.android.support:cardview-v7:$androidSupportVersion"
+    implementation 'com.squareup.okhttp3:okhttp:3.1.2'
+    implementation group:'com.squareup.picasso', name:'picasso', version:'2.5.0'
+    implementation 'com.github.bumptech.glide:glide:4.8.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.8.0'
+    implementation files('libs/volley.jar')
 }
+
+
