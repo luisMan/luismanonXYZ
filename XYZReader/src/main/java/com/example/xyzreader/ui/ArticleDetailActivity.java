@@ -5,10 +5,12 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.Loader;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.WindowInsets;
@@ -34,7 +36,8 @@ public class ArticleDetailActivity extends AppCompatActivity
     private MyPagerAdapter mPagerAdapter;
     private View mUpButtonContainer;
     private View mUpButton;
-
+    private Toolbar toolbar;
+    private CollapsingToolbarLayout collapsing;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +47,10 @@ public class ArticleDetailActivity extends AppCompatActivity
                             View.SYSTEM_UI_FLAG_LAYOUT_STABLE);
         }
         setContentView(R.layout.activity_article_detail);
-
+        //lets set the support for the action bar
+        toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        collapsing = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
         getSupportLoaderManager().initLoader(0, null, this);
 
         //instantiate the page adapter and also lets send the  parent object for modularity

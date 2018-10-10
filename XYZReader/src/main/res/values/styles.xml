@@ -27,6 +27,8 @@
         <item name="android:windowAllowEnterTransitionOverlap" tools:targetApi="lollipop">true</item>
         <item name="android:windowAllowReturnTransitionOverlap" tools:targetApi="lollipop">true</item>
         <item name="android:windowReenterTransition" tools:targetApi="lollipop">@transition/slide_top</item>
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">true</item>
     </style>
 
 
