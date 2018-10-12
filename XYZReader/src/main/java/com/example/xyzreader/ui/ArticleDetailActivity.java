@@ -50,6 +50,7 @@ public class ArticleDetailActivity extends AppCompatActivity
         //lets set the support for the action bar
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
         collapsing = (CollapsingToolbarLayout)findViewById(R.id.collapsing_toolbar);
         getSupportLoaderManager().initLoader(0, null, this);
 
@@ -165,7 +166,7 @@ public class ArticleDetailActivity extends AppCompatActivity
     //public access so my child class object be able to update this ui :-)
     public void updateUpButtonPosition() {
         int upButtonNormalBottom = mTopInset + mUpButton.getHeight();
-        mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
+        //mUpButton.setTranslationY(Math.min(mSelectedItemUpButtonFloor - upButtonNormalBottom, 0));
     }
 
 
